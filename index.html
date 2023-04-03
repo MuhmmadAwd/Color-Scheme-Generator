@@ -5,12 +5,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>colorScheme</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>dddd</h1>
+    <div class="wrapper">
+        <header>
+            <form>
+                <input name="color-input" class="color-input" type="color">
+                <select name="scheme-select" id="scheme-select">
+                    <option class="scheme-option" value="Monochrome" selected="">
+                        Monochrome
+                    </option>
+                    <option class="scheme-option" value="Monochrome-dark">
+                        Monochrome-dark
+                    </option>
+                    <option class="scheme-option" value="Monochrome-light">
+                        Monochrome-light
+                    </option>
+                    <option class="scheme-option" value="Analogic">
+                        Analogic
+                    </option>
+                    <option class="scheme-option" value="Complement">
+                        Complement
+                    </option>
+                    <option class="scheme-option" value="Analogic-complement">
+                        Analogic-complement
+                    </option>
+                    <option class="scheme-option" value="Triad">
+                        Triad
+                    </option>
+                </select>
+                <button class="btn btn-theme">
+                    <i class="fa fa-sun-o" aria-hidden="true"></i>
+
+                </button>
+                <button class="btn btn-scheme">get color scheme</button>
+            </form>
+        </header>
+        <section class="scheme-colors">
+            <article class="scheme-color"><span class="scheme-hex">#21212</span></article>
+            <article class="scheme-color"><span class="scheme-hex">#54212</span></article>
+            <article class="scheme-color"><span class="scheme-hex">#52532</span></article>
+            <article class="scheme-color"><span class="scheme-hex">#21212</span></article>
+            <article class="scheme-color"><span class="scheme-hex">#98512</span></article>
+        </section>
+        <footer>made with <i class="fa fa-heart" aria-hidden="true"></i> by @MuhmmadAwd</footer>
+    </div>
     <script src="./main.js"></script>
 </body>
 

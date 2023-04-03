@@ -1,3 +1,103 @@
-h1{
-    color: red;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ddd;
+    margin: 0;
+}
+
+.wrapper {
+    max-width: 500px;
+    background-color: #fff;
+    display: grid;
+    grid-template-rows: auto 60vh auto;
+    margin: 1em auto;
+    padding: 1em;
+}
+
+form {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1em;
+}
+
+form>* {
+    background-color: transparent;
+    border: 1px solid #ccc;
+}
+
+.color-input {
+    border: 0;
+}
+
+.btn {
+    padding: 0.3em 0;
+}
+
+.fa {
+    font-size: 1.3rem;
+}
+
+.fa-sun-o,
+.fa-moon-o {
+    color: rgb(235, 175, 10);
+}
+
+.scheme-colors {
+    display: flex;
+    padding: 1em 0;
+}
+
+.scheme-color:nth-child(1) {
+    height: 100%;
+    width: 20%;
+    background: rgb(206, 45, 45);
+}
+
+.scheme-color:nth-child(2) {
+    height: 100%;
+    width: 20%;
+    background: rgb(218, 15, 15);
+}
+
+.scheme-color:nth-child(3) {
+    height: 100%;
+    width: 20%;
+    background: rgb(155, 7, 7);
+}
+
+.scheme-color:nth-child(4) {
+    height: 100%;
+    width: 20%;
+    background: rgb(138, 11, 11);
+
+}
+
+.scheme-color:nth-child(5) {
+    height: 100%;
+    width: 20%;
+    background: rgb(61, 5, 5);
+}
+
+.scheme-color {
+    display: grid;
+    align-items: end;
+    text-align: center;
+
+}
+
+.scheme-hex {
+    background: #fff;
+    padding-top: 10px;
+    border: 1px dashed #727070;
+}
+
+.fa-heart {
+    color: rgb(160, 20, 20);
+}
+
+footer{
+    text-align: center;
+    letter-spacing: 2px;
 }
