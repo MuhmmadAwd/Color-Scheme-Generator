@@ -9,10 +9,11 @@ body {
 
 .wrapper {
     max-width: 500px;
+    min-height: 100vh;
     background-color: #fff;
     display: grid;
-    grid-template-rows: auto 60vh auto;
-    margin: 1em auto;
+    grid-template-rows: auto 1fr auto;
+    margin: auto;
     padding: 1em;
 }
 
@@ -47,6 +48,7 @@ form>* {
 .scheme-colors {
     display: flex;
     padding: 1em 0;
+    height: 100%;
 }
 
 .scheme-color:nth-child(1) {
@@ -89,7 +91,7 @@ form>* {
 
 .scheme-hex {
     background: #fff;
-    padding-top: 10px;
+    padding: 0.2em;
     border: 1px dashed #727070;
 }
 
@@ -97,7 +99,7 @@ form>* {
     color: rgb(160, 20, 20);
 }
 
-footer{
+footer {
     text-align: center;
     letter-spacing: 2px;
 }
