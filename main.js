@@ -1,27 +1,44 @@
-const formScheme = document.getElementById("form-scheme")
 
-formScheme.addEventListener("submit", fetchColorScheme)
+function init() {
+    const schemeForm = document.getElementById("form-scheme")
+    const themeBtn = document.getElementById("btn-theme")
+
+    schemeForm.addEventListener("submit", fetchColorScheme)
+    themeBtn.addEventListener("click", toggleTheme)
+}
 
 function fetchColorScheme(e) {
     e.preventDefault()
-    const colorSeed = formScheme.querySelector(".color-input").value.slice(1)
-    const mode = formScheme.querySelector("#scheme-select").value
+
+    const colorSeed = document.querySelector(".color-input").value.slice(1)
+    const mode = document.querySelector("#scheme-select").value
+
     fetch(`https://www.thecolorapi.com/scheme?hex=${colorSeed}&mode=${mode}&count=5`)
         .then((res) => res.json())
-        .then((data) => {
-            renderColorScheme(data.colors)
-        })
+        .then((data) => renderSchemePalette(data.colors))
 }
 
-function renderColorScheme(colors) {
-    let schemeColorList = ''
+function generateSchemePalette(colors) {
+    let SchemePalette = ''
+
     colors.map((color) => {
-        schemeColorList += `
+        SchemePalette += `
         <article style="background-color: ${color.hex.value};" class="scheme-color">
-        <span class="scheme-hex">${color.hex.value}</span>
+        <span class="scheme-hex theme">${color.hex.value}</span>
         </article>`
     })
-    document.querySelector(".scheme-colors").innerHTML = schemeColorList
+
+    return SchemePalette
 }
 
+function renderSchemePalette(colors) {
+    document.querySelector(".scheme-colors").innerHTML = generateSchemePalette(colors)
+}
+
+function toggleTheme() {
+    document.querySelector(".theme").classList.toggle("theme-dark")
+    document.querySelector(".fa-sun-o").classList.toggle("fa-moon-o")
+}
+
+document.addEventListener("DOMContentLoaded", init)
 
