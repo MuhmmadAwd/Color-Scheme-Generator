@@ -9,6 +9,13 @@
     --white-700: #fff;
 }
 
+html,
+body {
+    background-color: var(--white-400);
+    color: var(--dark-700);
+    margin: 0;
+}
+
 .theme {
     background-color: var(--white-700);
     color: var(--dark-700);
@@ -19,20 +26,14 @@
     color: var(--white-700);
 }
 
-body {
-    background-color: var(--white-400);
-    color: var(--dark-700);
-    margin: 0;
-}
 
 .wrapper {
-    max-width: 500px;
     min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
     margin: auto;
     padding: 1em;
-    
+
 }
 
 button,
@@ -75,6 +76,7 @@ form>* {
     display: flex;
     padding: 1em 0;
     height: 100%;
+    max-width: 100%;
 }
 
 .scheme-color {
@@ -87,10 +89,30 @@ form>* {
 
 .scheme-hex {
     padding: 0.2em;
-    border: 1px dashed #727070;
 }
 
 footer {
     text-align: center;
     letter-spacing: 2px;
+}
+
+@media (min-width:650px) {
+    .wrapper {
+        max-width: 55%;
+    }
+}
+
+@media (max-width: 370px) {
+    .scheme-colors {
+        flex-direction: column;
+        padding: 1em 0;
+        height: 100%;
+        max-width: 100%;
+    }
+
+    .scheme-color {
+        justify-items: end;
+        width: 100%;
+    }
+
 }
