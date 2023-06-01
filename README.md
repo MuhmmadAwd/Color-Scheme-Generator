@@ -1,7 +1,7 @@
 <div align="center">
 <h1 align="center">Color Scheme Generator</h1>
   <h3>
-    <a href="https://muhmmadawd.github.io/color-Scheme/">
+    <a href="https://muhmmadawd.github.io/Color-Scheme-Generator">
       Live Demo
     </a>
   </h3>
